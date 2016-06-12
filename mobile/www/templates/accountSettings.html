@@ -1,0 +1,114 @@
+<ion-view>
+	<ion-nav-bar class="brandtreat-bar">
+		<i class="icon ion-chevron-left back-history" ng-click="goBack()"></i>
+		<img src="img/logo-light.png" alt="Brandtreat" class="logo-top-bar left-logo-padding pointer" ui-sref="challengeMenu" />
+	</ion-nav-bar>
+	<ion-content>
+		<div class="row form-container">
+		  <div class="col col-80 col-offset-10 form">
+		    <form ng-submit="doUpdateSettings()">
+		      <div class="list">
+		      	<figure class="item item-avatar">
+		      		<img ng-src="{{userData.avatar}}" alt="User Avatar" ng-click="galleryPicture()" />
+		      		<figcaption class="upload-profile-picture">
+		      			<i class="icon ion-ios-upload-outline"></i>
+		      			<a ng-click="galleryPicture()">Change Profile Picture</a>
+		      		</figcaption>
+		      	</figure>
+
+		      	<h5>Personal Information</h5>
+
+		        <label class="item item-input update-item-input">
+		          <span class="input-label">
+		          	<i class="icon ion-android-contact" id="name-input-icon"></i>
+		          </span>
+		          <input type="text" class="form-input" ng-focus="inputFocus(true,'name-input-icon')" ng-blur="inputFocus(false, 'name-input-icon')" ng-model="updateData.name" placeholder="Name" />
+		        </label>
+			  	<label class="item item-input item-select update-item-input">
+				    <div class="input-label">
+				    	<i class="icon ion-ios-world-outline" id="country-input-icon"></i>
+				      	Country
+				    </div>
+				    <select ng-focus="inputFocus(true,'country-input-icon')" ng-blur="inputFocus(false, 'country-input-icon')">
+				     <option ng-repeat="country in countries">
+				     	{{country.name}}
+				     </option>
+				    </select>
+  				</label>
+
+		        <label class="item item-input update-item-input">
+		          <span class="input-label">
+		          	<i class="icon ion-ios-email-outline" id="email-input-icon"></i>
+		          </span>
+		          <input type="password" class="form-input" ng-focus="inputFocus(true,'email-input-icon')" ng-blur="inputFocus(false, 'email-input-icon')" ng-model="updateData.email" placeholder="Email" />
+		        </label>
+
+		        <label class="item item-input update-item-input">
+		          <span class="input-label">
+		          	<i class="icon ion-ios-telephone-outline" id="phone-input-icon"></i>
+		          </span>
+		          <input type="password" class="form-input" ng-focus="inputFocus(true,'phone-input-icon')" ng-blur="inputFocus(false, 'phone-input-icon')" ng-model="updateData.phone" placeholder="Phone" />
+		        </label>
+
+		        <h5>Account Information</h5>
+
+		        <label class="item item-input update-item-input">
+		          <span class="input-label">
+		          	<i class="icon ion-ios-person-outline" id="user-input-icon"></i>
+		          </span>
+		          <input type="text" class="form-input" ng-focus="inputFocus(true,'user-input-icon')" ng-blur="inputFocus(false, 'user-input-icon')" ng-model="updateData.username" placeholder="Username" />
+		        </label>
+
+		        <label class="item item-input update-item-input">
+		          <span class="input-label">
+		          	<i class="icon ion-ios-locked-outline" id="pass-input-icon"></i>
+		          </span>
+		          <input type="password" class="form-input" ng-focus="inputFocus(true,'pass-input-icon')" ng-blur="inputFocus(false, 'pass-input-icon')" ng-model="updateData.password" placeholder="Password" />
+		        </label>
+
+		        <label class="item item-input update-item-input">
+		          <span class="input-label">
+		          	<i class="icon ion-ios-locked-outline" id="confirm-password-input-icon"></i>
+		          </span>
+		          <input type="password" class="form-input" ng-focus="inputFocus(true,'confirm-password-input-icon')" ng-blur="inputFocus(false, 'confirm-password-input-icon')" ng-model="updateData.confirmPassword" placeholder="Confirm Password" />
+		        </label>
+				
+				<h5>Challenge Notifications</h5>
+				
+		        <div class="item item-toggle update-item-input">
+		        	<span class="toggle-label">
+			          	<i class="icon ion-android-notifications-none" id="notification-input-icon"></i>
+						Receive Notifications
+		        	</span>
+					<label class="toggle toggle-brandtreat">
+		          	 	<input type="checkbox">
+						<div class="track">
+			     			<div class="handle"></div>
+			   			</div>
+					</label>
+		        </div>
+
+				
+		        <div class="item item-toggle update-item-input">
+		        	<span class="toggle-label">
+			          	<i class="icon ion-android-notifications" id="notificate-via-input-icon"></i>
+						Notificate me via
+					</span>
+					<label class="toggle toggle-brandtreat">
+		          	 	<input type="checkbox">
+						<div class="track">
+			     			<div class="handle"></div>
+			   			</div>
+					</label>
+		        </div>
+
+
+		        <label class="item">
+		          <button class="button button-block button-brandtreat" type="submit" ui-sref="userProfile">Update</button>
+		        </label>
+		      </div>
+		    </form>
+		  </div>
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,66 @@
+<ion-view>
+	<ion-nav-bar class="brandtreat-bar">
+		<i class="icon ion-chevron-left back-history" ng-click="goBack()"></i>
+		<img src="img/logo-light.png" alt="Brandtreat" class="logo-top-bar left-logo-padding pointer" ui-sref="challengeMenu" />
+		<i class="pull-right icon ion-android-settings settings" ui-sref="accountSettings"></i>
+	</ion-nav-bar>
+	<ion-content>
+		<div class="row profile-information">
+			<figure class="col col-20 round-img avatar-profile">
+				<img ng-src="{{userData.avatar}}" alt="User Avatar" class="img-responsive" />
+			</figure>
+			<div class="col col-80 col-center user-information">
+				<h5 class="user-name">Alexandra Leavin</h5>
+				<span class="user-country"><img class="flag flag-ca">Montreal, Canada</span>
+			</div>
+		</div>
+		<div class="row challenges-stats">
+			<div class="col col-33">
+				<figure class="round-img global-ranking-stat">
+					 <span class="block center user-ranking">0</span>
+					 <span class="block center total-users">-</span>
+				</figure>
+				<h5 class="text-center stat-description">Global Ranking</h5>
+			</div>
+			<div class="col col-33">
+				<figure class="round-img completed-challenges">
+					 <span class="block center user-ranking">0</span>
+					 <span class="block center total-users">-</span>
+				</figure>
+				<h5 class="text-center stat-description">Completed Challenges</h5>
+			</div>
+			<div class="col col-33">
+				<div class="histogram inline">
+					<div class="column-container inline">
+						<div class="column column-light-green"></div>
+						<span class="block text-center stat-description">0</span>
+					</div>
+					<div class="column-container inline">
+						<div class="column column-green"></div>
+						<span class="block text-center stat-description">0</span>
+					</div>
+				</div><!--
+				--><div class="histogram-values inline">
+					<ul>
+						<li>Challenges</li>
+						<li><span class="inline bullet green-bullet"></span>Completed</li>
+						<li><span class="inline bullet light-green-bullet"></span>Active</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row user-challenges">
+			<p class="text-center">Sorry, you haven't join any challenge yet</p>
+<!-- 			<div class="col col-33 challenge-container">
+				<div class="challenge-button text-center" ui-sref="challengeDetails">
+					<figure class="brand-logo">
+						<img src='img/brands/vive-deporte.png' alt='{{challenge.brand}}' class="img-responsive">
+					</figure>
+					<div class="challenge-info">
+						<i class="icon ion-ios-people"></i> 200
+					</div>
+				</div>
+			</div> -->
+		</div>
+	</ion-content>
+</ion-view>

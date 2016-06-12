@@ -1,0 +1,155 @@
+@import "./vendor/materialize/materialize";
+@import "./components/variables", "./components/footer", "./components/topBar", "./components/header";
+
+html
+	font-family: 'Roboto', sans-serif
+
+body
+	margin: 0
+
+nav ul a, nav .brand-logo
+	color: #444
+nav
+	background-color: color('blue', 'base')
+nav.truncate
+	overflow-x: auto
+
+p
+	line-height: 2rem
+
+footer.page-footer
+	margin: 0
+
+.app-bar-button
+	margin-top: 5px
+
+.card-bar-button
+	margin-top: 35px
+
+.admin-container
+	margin: 20px
+
+.breadcrumbs
+	margin-left: 16px
+	:before
+		content: '>'
+		font-family: 'Roboto'
+	:last-child
+		padding-right: 16px
+
+.button-collapse
+	color: #26a69a
+
+.edit
+	cursor: pointer
+	position: relative
+	.icon
+		font-size: 2em
+		position: absolute
+		right: -0.3em
+		top: -0.4em
+.edit-action
+	margin-top: -12px !important
+	font-size: 20px !important
+
+.footer-content
+	display: block
+	float: right
+	padding-right: 14px
+	
+	.paginate-left
+		min-width: 24px !important
+		margin-right: 24px !important
+		margin-top: 12px !important
+		padding-top: 0 !important
+	
+	.paginate-right
+		min-width: 24px !important
+		margin-top: 12px !important
+		padding-top: 0 !important
+
+	.paginate-icon
+		font-size: 24px
+
+.footer-text
+	float: right
+	padding-top: 24px
+	height: 40px
+
+
+.full-width
+	width: 100% !important
+
+.hidden
+	display: none
+
+.inline-label
+	display: inline-block
+	left: 14px
+	position: relative
+	top: 2px
+
+.main-app > div
+	background: color("grey", "lighten-3")
+
+.parallax
+	img
+		display: initial
+
+.parallax-container
+	min-height: 380px
+	line-height: 0
+	height: auto
+	color: rgba(255,255,255,.9)
+	.section 
+		width: 100%
+
+.react-parallax-content
+	width: 100%
+
+.search-box
+	position: relative
+	.search-box-input
+		bottom: 10px
+		position: absolute !important
+		right: 14px
+
+.sortable
+	user-select: none
+	cursor: pointer
+	svg
+		color: rgba(0,0,0,.87)
+		font-size: 16dp
+		margin-left: 2px
+		margin-bottom: 2px
+.sortable:hover
+	svg
+		color: rgba(0,0,0,.38)
+.sortable.sorted
+		color: rgba(0,0,0,.87)
+
+.white
+	background: white
+	width: 256px
+
+@media only screen and (max-width : 992px)
+
+	.parallax-container .section
+		position: absolute
+		top: 40%
+
+	#index-banner .section
+		top: 10%
+	.button-collapse
+		font-size: 2.7em
+
+@media only screen and (max-width : 600px)
+	#index-banner .section
+		top: 0
+	.button-collapse
+		font-size: 2.7em
+	.icon-block
+		padding: 0 15px
+
+	.icon-block
+		font-size: inherit

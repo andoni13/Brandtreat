@@ -1,0 +1,9 @@
+{
+	"secret": "secretFactor",
+	"SALT_WORK_FACTOR": 10,
+	"db": {
+		"development": "mongodb://brandtreat:brandtreat@ds049211.mlab.com:49211/dispatch-social",
+		"test": "mongodb://brandtreat:brandtreat@ds049211.mlab.com:49211/dispatch-social",
+		"production": "mongodb://brandtreat:brandtreat@ds049211.mlab.com:49211/dispatch-social"
+	}
+}

@@ -1,0 +1,36 @@
+<ion-view>
+	<ion-nav-bar class="brandtreat-bar">
+		<img src="img/logo-light.png" alt="Brandtreat" class="logo-top-bar" />
+		<div class="avatar-top-bar-container pull-right img-rounded" ui-sref="userProfile">
+			<img ng-src="{{userData.avatar}}" alt="Avatar Icon" class="avatar-top-bar round-img">
+		</div>
+	</ion-nav-bar>
+	<ion-content>
+		<div class="col col-33 challenge-container" ng-repeat="challenge in challenges">
+			<div class="challenge-button text-center" ui-sref="challengeDetails({id: {{challenge.id}}})">
+				<figure class="brand-logo">
+					<img ng-src='{{challenge.logoSrc}}' alt='{{challenge.brand}}' class="img-responsive">
+				</figure>
+				<div class="challenge-info">
+					<span class="center">
+						<i class="icon ion-ios-people"></i> {{challenge.participants}}<span ng-if="challenge.maxParticipants">/{{challenge.maxParticipants}}</span>
+					</span>
+				</div>
+			</div>
+			<div class="challenge-description text-center">
+				<p class="challenge-title">{{challenge.title}}</p>
+				<span class="challenge-requirements">
+					<i class="icon ion-clock dark-icon"></i>
+					{{challenge.timeToEnd}} left
+				</span>
+			</div>
+		</div>
+	</ion-content>
+	<ion-footer-bar class="bar bar-footer brandtreat-bar">
+		<div class="buttons button-bar">
+			<span class="button button-brandtreat ">Active</span>
+			<span class="button button-brandtreat ">Future</span>
+			<span class="button button-brandtreat ">Finished</span>
+		</div>
+	</ion-footer-bar>
+</ion-view>
