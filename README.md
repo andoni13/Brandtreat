@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Brantreat
 I developed a mobile application/website that presents daily challenges for users to win rewards. The app seeks to involve brands with users through creative challenges to increase engagement while users have the chance to compete with other users or friends for rewards or promotions of a certain product or service.
 
@@ -10,3 +11,7 @@ Then you must run
 npm run migrate
 npm start
 ```
+=======
+# Brandtreat
+Brandtreat is a platform that helps brands to engage with customers through challenges and rewards.
+>>>>>>> cfc3964aaf9741e5239a9aea81684ae7f15c29a5
